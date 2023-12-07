@@ -1,14 +1,16 @@
 # a213_pw_analyzer.py
 import time
-import pwalgorithms as pwa
+import pwalgorithms2 as pwa
 
 password = input("Enter password:")
 
-print("Analyzing a two-word password ...")
+print("Analyzing password ...")
 time_start = time.time()
 
 # attempt to find password
-found, num_guesses = pwa.two_words(password)
+# found, num_guesses = pwa.one_word(password)
+# found, num_guesses = pwa.two_words(password)
+found, num_guesses = pwa.two_words_and_digit(password)
 time_end = time.time()
 
 # report results
